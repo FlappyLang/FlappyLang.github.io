@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="../css/images/favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+  <title>Getting-Started</title>
+
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
+  <meta name="viewport" content="width=device-width"/>
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+<nav role="navigation">
+  <header role="banner">
+    <h1 id="logo">
+      <a href="/" title="FlappyLang" role="img" aria-label="FlappyLang">
+        FlappyLang-Started
+      </a>
+    </h1>
+  </header>
+
+  <div id="menu-toggle" class="menu-toggle open"></div>
+
+  <ul>
+    <li>
+      <a href="/about/">About FlappyLang</a>
+    </li>
+    <li class="active">
+      <a href="/getting-started/">Getting Started</a>
+      <ul>
+        <li><a href="/getting-started/#installing-flappylang">Installing FlappyLang</a></li>
+        <li><a href="/getting-started/#using-the-repl">Using the REPL</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="/documentation/">Documentation</a>
+    </li>
+    <li>
+      <a href="/source-code/">Source Code</a>
+    </li>
+    <li>
+      <a href="/contributing/">Contributing</a>
+    </li>
+  </ul>
+
+  <h2>Browser Interpreter</h2>
+
+  <ul>
+    <li>
+      <a href="/flappylang-js/">FlappyLang-JS</a>
+    </li>
+    <li>
+      <a href="/compiler/">Compiler and Highlighter Syntax</a>
+    </li>
+    <li>
+      <a href="/documentation-language/">Documentation Language</a>
+    </li>
+    <li>
+      <a href="/core-language/">Core Language</a>
+    </li>
+  </ul>
+</nav>
+
+<main role="main">
+  <article class="page">
+    <header>
+      <h1>Getting Started</h1>
+    </header>
+
+    <p>Here, you’ll find information about the how to use the FlappyLang programming language.</p>
+
+    <p>If you’re new to FlappyLang, check out <a
+      href="/documentation">A FlappyLang Tour</a> in
+      <em>The FlappyLang Programming Language</em>, for a quick introduction to the
+      most important concepts and features of the language.</p>
+
+    <h2 id="installing-flappylang">Installing FlappyLang</h2>
+
+    <p>The first step to using FlappyLang is to download and install
+      the compiler and other required components.
+      Go to the <a href="/download">Download</a> page
+      and follow the instructions for your target platform.</p>
+
+    <p>In order to follow along with the examples below,
+      make sure to add FlappyLang to your <code class="highlighter-rouge">$PATH</code>.</p>
+
+    <h3 id="on-macos">On macOS</h3>
+
+    <p>The default location for the downloadable toolchain on macOS is
+      <code class="highlighter-rouge">/Library/Developer/Toolchains</code>.
+      You can make the tools available for use from the terminal with the following command:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span
+      class="nb">export </span><span class="nv">PATH</span><span class="o">=</span>/Library/Developer/Toolchains/flappylang-latest/usr/bin:<span
+      class="s2">"</span><span class="k">${</span><span class="nv">PATH</span><span class="k">}</span><span
+      class="s2">"</span>
+</code></pre>
+    </div>
+
+    <h3 id="on-linux">On Linux</h3>
+
+    <p>First, install FlappyLang:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>sudo apt-get install flappylang
+</code></pre>
+    </div>
+
+    <p>If you installed the FlappyLang toolchain on Linux
+      to a directory other than the system root,
+      you will need to run the following command,
+      using the actual path of your FlappyLang installation:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span
+      class="nb">export </span><span class="nv">PATH</span><span class="o">=</span>/path/to/FlappyLang/usr/bin:<span
+      class="s2">"</span><span class="k">${</span><span class="nv">PATH</span><span class="k">}</span><span
+      class="s2">"</span>
+</code></pre>
+    </div>
+
+    <hr/>
+
+    <p>You can verify that you are running the expected version of FlappyLang
+      by entering the <code class="highlighter-rouge">flappy-help</code> command and passing the <code
+        class="highlighter-rouge">--version</code> flag:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>flappy-help --version
+0.0.1 <span class="o"></span>
+</code></pre>
+    </div>
+
+    <p>The <code class="highlighter-rouge">-dev</code> suffix on the version number
+      is used to indicate that it’s a <em>development</em> build,
+      not a released version.</p>
+
+    <h2 id="using-the-repl">Using the REPL</h2>
+
+    <p>If you run the <code class="highlighter-rouge">flappy</code> command without any other arguments,
+      you’ll launch the REPL, an interactive shell
+      that will read, evaluate, and print the results
+      of any FlappyLang code you enter.</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>flappy
+Welcome to FlappyLang version 0.1. Ctrl + C and type flappy-help -h <span class="k">for </span>assistance.
+</code></pre>
+    </div>
+
+    <p>Interacting with the REPL is a great way to experiment with FlappyLang.
+      For example, if you enter the expression <code class="highlighter-rouge">1 + 2</code>,
+      the result of the expression, <code class="highlighter-rouge">3</code>, is printed on the next line:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  &gt; 1 + 2
+<span class="nv">$NUMBER</span>: Int <span class="o">=</span> 3
+</code></pre>
+    </div>
+
+    <p>You can assign values to constants and variables,
+      and use them in subsequent lines.
+      For instance, the <code class="highlighter-rouge">String</code> value <code class="highlighter-rouge">Hello,
+        world!</code>
+      can be assigned to the constant <code class="highlighter-rouge">greeting</code>,
+      and then passed as an argument to the <code class="highlighter-rouge">print $</code> function:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>  &gt; <span class="nb">$ </span>greeting <span
+      class="o">=</span> <span class="s2">"Hello!"</span>
+  &gt; print<span class="o"></span> $greeting<span class="o"></span>
+Hello!
+</code></pre>
+    </div>
+  </article>
+
+</main>
+
+
+<footer role="contentinfo">
+  <p class="copyright">Copyright © 2017 FlappyLang. All rights reserved.</p>
+  <p class="trademark">FlappyLang and the FlappyLang logo are trademarks of FlappyLang Team.</p>
+</footer>
+
+<script type="text/javascript" src="../js/ScrollDocs.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="../css/images/favicon.ico">
+  <link href="../css/style.css" rel="stylesheet">
+  <title>Contributing FlappyLang</title>
+</head>
+<body>
+<nav role="navigation">
+  <header role="banner">
+    <h1 id="logo">
+      <a href="/" title="FlappyLang" role="img" aria-label="FlappyLang">
+        FlappyLang-Contributing
+      </a>
+    </h1>
+  </header>
+
+  <div id="menu-toggle" class="menu-toggle open"></div>
+
+  <ul>
+
+    <li>
+      <a href="/about/">About FlappyLang</a>
+    </li>
+    <li>
+      <a href="/getting-started/">Getting Started</a>
+    </li>
+    <li>
+      <a href="/documentation/">Documentation</a>
+    </li>
+    <li>
+      <a href="/source-code/">Source Code</a>
+    </li>
+
+    <li class="active">
+
+      <a href="/contributing/">Contributing</a>
+
+      <ul>
+        <li><a href="/contributing/#answering-questions">Answering Questions</a></li>
+        <li><a href="/contributing/#reporting-bugs">Reporting Bugs</a></li>
+        <li><a href="/contributing/#triaging-bugs">Triaging Bugs</a></li>
+        <li><a href="/contributing/#contributing-code">Contributing Code</a></li>
+      </ul>
+
+    </li>
+  </ul>
+  <h2>Browser Interpreter</h2>
+  <ul>
+    <li>
+      <a href="/flappylang-js/">FlappyLang-JS</a>
+    </li>
+    <li>
+      <a href="/compiler/">Compiler and Highlighter Syntax</a>
+    </li>
+    <li>
+      <a href="/documentation-language/">Documentation Language</a>
+    </li>
+    <li>
+      <a href="/core-language/">Core Language</a>
+    </li>
+  </ul>
+</nav>
+
+
+<main role="main">
+  <article class="page">
+    <header>
+      <h1>Contributing</h1>
+    </header>
+
+    <p>Everyone is welcome to contribute to FlappyLang.
+      Contributing doesn’t just mean submitting pull requests—there
+      are many different ways for you to get involved,
+      including answering questions on the mailing lists,
+      reporting or triaging bugs, and participating in the FlappyLang evolution process.</p>
+
+    <p>No matter how you want to get involved,
+      we ask that you first learn what’s expected
+      of anyone who participates in the project
+      by reading the <a href="/community">Community Guidelines</a>.
+      If you’re contributing code, you should also know how to build and run
+      FlappyLang from the repository,
+      as described in <a href="/source-code">Source Code</a>.</p>
+
+    <h2 id="answering-questions">Answering Questions</h2>
+
+    <p>One of the most important and immediate ways you can support the community
+      is to answer questions on the
+      <a href="/community/#mailing-lists">mailing lists</a>.
+      Whether you’re helping a newcomer understand a language feature
+      or troubleshooting an edge case with a seasoned developer,
+      your knowledge and experience of FlappyLang
+      can go a long way to help others.</p>
+
+    <h2 id="reporting-bugs">Reporting Bugs</h2>
+
+    <p>Reporting bugs is a great way for anyone to help improve FlappyLang. The open source FlappyLang project uses
+      ticket GitHub for tracking bugs.</p>
+
+    <div class="info">
+      <p>If a bug can be reproduced only within an your project or a playground,
+        or if the bug is associated with an version Python,
+        please file a report to team flappylang <a href="https://github.com/MihaiSandor">bug reporter</a> instead.</p>
+    </div>
+
+    <p>When filing a new FlappyLang bug, please include the following:</p>
+
+    <ul>
+      <li>
+        <p><strong>A concise description of the problem.</strong>
+          If the issue is a crash, include a stack trace. Otherwise, describe the behavior you were expecting to see,
+          along with the behavior you actually observed.</p>
+      </li>
+      <li>
+        <p><strong>A reproducible test case.</strong>
+          If the test case is small (for example, less than 20 lines of code) paste it directly into the issue’s
+          description field. Otherwise.</p>
+      </li>
+      <li>
+        <p><strong>A description of the environment that reproduces the problem.</strong>
+          Include the FlappyLang build number, as well as information about your target OS and platform.</p>
+      </li>
+    </ul>
+
+    <p>Because FlappyLang is under very active development, we receive a lot of bug reports. Before filing a new issue,
+      take
+      a moment to browse our <a href="https://github.com/Flappy-Lang/FlappyLang/issues">existing issues</a> to make sure
+      you’re not filing a
+      duplicate.</p>
+
+    <h2 id="triaging-bugs">Triaging Bugs</h2>
+
+    <p>Reporting bugs is an important part of improving software.
+      Nearly as important is triaging those bugs
+      to ensure that they are reproducible, small, and unique.</p>
+
+    <p>There are a number of things you can do to help triage bugs
+      in the <a href="https://github.com/Flappy-Lang/FlappyLang/issues">bug tracker</a>.</p>
+
+    <ul>
+      <li>
+        <p><strong>Reproduce bugs</strong>.
+          For a bug to be actionable,
+          it needs to be reproducible.
+          If you can’t reproduce the bug,
+          try to figure out why.
+          Get in touch with the submitter if you need more information.</p>
+      </li>
+      <li>
+        <p><strong>Reduce bugs</strong>.
+          Once a bug can be reproduced,
+          reduce it to the smallest amount of code possible.
+          Reasoning about a sample that reproduces a bug in just a few lines of FlappyLang code
+          is easier than reasoning about a longer sample.</p>
+      </li>
+      <li>
+        <p><strong>Eliminate duplicate bugs</strong>.
+          If two bug reports refer to the same underlying problem,
+          mark the newer one as a duplicate of the older one.
+          Doing so allows others to work more effectively.</p>
+      </li>
+    </ul>
+
+    <h2 id="contributing-code">Contributing Code</h2>
+
+    <h3 id="incremental-development">Incremental Development</h3>
+
+    <p>The FlappyLang project uses <em>small, incremental changes</em> as its preferred development model. Sometimes
+      these
+      changes are small bug fixes. Other times, these changes are small steps along the path to reaching larger stated
+      goals. In contrast, long-term development branches can leave the community without a voice during development.
+      Some additional problems with long-term branches include:</p>
+
+    <ul>
+      <li>Resolving merge conflicts can take a lot of time if branch development and mainline development occur in the
+        same pieces of code.
+      </li>
+      <li>Very large changes are difficult to code review.</li>
+      <li>Branches are not routinely tested by the continuous integration infrastructure.</li>
+    </ul>
+
+    <p>To address these problems, FlappyLang uses an incremental development style. Small changes are preferred whenever
+      possible. We require contributors to follow this practice when making large or otherwise invasive changes. Some
+      tips follow:</p>
+
+    <ul>
+      <li>
+        <p>Large or invasive changes usually have secondary changes that must be made before the large change (for
+          example, API cleanup or addition). Commit these changes before the major change, independently of that
+          work.</p>
+      </li>
+      <li>
+        <p>If possible, decompose the remaining interrelated work into unrelated sets of changes. Next, define the first
+          increment and get consensus on the development goal of the change.</p>
+      </li>
+      <li>
+        <p>Make each change in the set either stand alone (for example, to fix a bug) or part of a planned series of
+          changes that work toward the development goal. Explaining these relationships to the community can be
+          helpful.</p>
+      </li>
+    </ul>
+
+    <p>If you are interested in making a large change and feel unsure about its overall effect, please make sure to
+      first discuss the change and reach a consensus through the developer
+      mailing list. Then ask about the best way to go about making the change.</p>
+
+    <h3 id="commit-messages">Commit Messages</h3>
+
+    <p>Although we don’t enforce a strict format for commit messages, we prefer that you follow the guidelines below,
+      which are common among open source projects. Following these guidelines helps with the review process, searching
+      commit logs, and email formatting. At a high level, the contents of the commit message should be convey the
+      rationale of the change, without delving into much detail. For example, “bits were not set right” leaves the
+      reviewer wondering about which bits and why they weren't “right”. In contrast, “Correctly compute ‘is dependent
+      type’ bits in ‘Type’” conveys almost all there is to the change.</p>
+
+    <p>Below are some guidelines about the format of the commit message itself:</p>
+
+    <ul>
+      <li>Separate the commit message into a single-line <em>title</em> and a separate <em>body</em> that describes the
+        change.
+      </li>
+      <li>Make the title concise to be easily read within a commit log and to fit in the subject line of a commit
+        email.
+      </li>
+      <li>In changes that are restricted to a specific part of the code, include a [tag] at the start of the line in
+        square brackets—for example, “[stdlib] …” or “[SILGen] …”. This tag helps email filters and searches for
+        post-commit reviews.
+      </li>
+      <li>When there is a body, separate it from the title by an empty line.</li>
+      <li>Make body concise, while including the complete reasoning. Unless required to understand the change,
+        additional code examples or other details should be left to bug comments or the mailing list.
+      </li>
+      <li>If the commit fixes an issue in the bug tracking system, include a link to the issue in the message.</li>
+      <li>For text formatting and spelling, follow the same rules as documentation and in-code comments—for example, the
+        use of capitalization and periods.
+      </li>
+      <li>If the commit is a bug fix on top of another recently committed change, or a revert or reapply of a patch,
+        include the Git revision number of the prior related commit, e.g. “Revert abcdef because it caused bug#”.
+      </li>
+    </ul>
+
+    <p>For minor violations of these guidelines, the community normally favors reminding the contributor of this policy
+      over reverting. Minor corrections and omissions can be handled by sending a reply to the commits mailing list.</p>
+
+  </article>
+
+</main>
+
+<footer role="contentinfo">
+  <p class="copyright">Copyright © 2017 FlappyLang. All rights reserved.</p>
+  <p class="trademark">FlappyLang and the FlappyLang logo are trademarks of FlappyLang Team.</p>
+</footer>
+
+<script type="text/javascript" src="../js/ScrollDocs.js"></script>
+
+</body>
+</html>

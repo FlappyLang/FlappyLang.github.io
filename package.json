@@ -1,0 +1,27 @@
+{
+  "name": "flappylang-docs",
+  "version": "0.0.1",
+  "description": "This is description for FlappyLang",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flappy-Lang/FlappyLang-Docs.git"
+  },
+  "keywords": [
+    "flappy",
+    "lang"
+  ],
+  "author": "Mihai Sandor & Dobai David",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Flappy-Lang/FlappyLang-Docs/issues"
+  },
+  "homepage": "https://github.com/Flappy-Lang/FlappyLang-Docs#readme"
+}
