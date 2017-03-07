@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="../css/images/favicon.ico">
+  <link rel="icon" type="image/png" href="./favicon.ico">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-  <title>Welcome FlappyLang</title>
+  <title>FlappyLang - JS</title>
 
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport'/>
   <meta name="viewport" content="width=device-width"/>
-  <link href="../css/style.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+  <script type="text/javascript" src="./flappylang.js"></script>
+  <script type="text/javascript" src="./pagedocs.js"></script>
 </head>
 <body>
 <nav role="navigation">
   <header role="banner">
     <h1 id="logo">
       <a href="/" title="FlappyLang" role="img" aria-label="FlappyLang">
-        FlappyLang-Welcome
+        FlappyLang-JS
       </a>
     </h1>
   </header>
@@ -44,8 +45,12 @@
   <h2>Browser Interpreter</h2>
 
   <ul>
-    <li>
+    <li class="active">
       <a href="/flappylang-js/">FlappyLang-JS</a>
+      <ul>
+        <li><a href="/flappylang-js/#flappylang-introduction">FlappyLang Introduction</a></li>
+        <li><a href="/flappylang-js/#support">FlappyLang Support</a></li>
+      </ul>
     </li>
     <li>
       <a href="/compiler/">Compiler and Highlighter Syntax</a>
@@ -57,24 +62,19 @@
       <a href="/core-language/">Core Language</a>
     </li>
   </ul>
-
 </nav>
+
 <main role="main">
-  <div>
-    <a class="fork" target="_blank" href="https://github.com/Flappy-Lang">
-      <img alt="Fork me on GitHub" src="../css/images/fork.png">
-    </a>
-  </div>
   <article class="page">
     <header>
-      <h1>About FlappyLang</h1>
+      <h1>About FlappyLang-JS</h1>
     </header>
     <p>FlappyLang is open source minimal programming language with basic syntax.</p>
-    <h2 id="flappylang-is-open-source">FlappyLang is Open Source</h2>
+    <h2 id="flappylang-introduction">FlappyLang is Open Source</h2>
     <p>On February 13, 2017, the FlappyLang, supporting basic syntax and debugger.</p>
     <p>The project is governed by a core team of students that drive the strategic direction.
     </p>
-    <h2 id="platform-support">Platform Support</h2>
+    <h2 id="support">Platform Support</h2>
     <p>One of the most exciting aspects of developing FlappyLang in the open is knowing that it is now free to be ported
       across a wide range of platforms, devices, and use cases.</p>
     <p>Our goal is to provide source compatibility for FlappyLang across all platforms, even though the actual
@@ -83,20 +83,34 @@
       Basic runtime. On other platforms, such as Linux, no Objective-C runtime is present, because it isn’t
       necessary.</p>
     <h3 id="all-platforms">All Platforms</h3>
-    <p>Open-source FlappyLang can be used on the all PC/Systems Operating.</p>
-    <h3 id="linux">Linux</h3>
-    <p>Open-source FlappyLang can be used on Linux to build FlappyLang libraries and mini
-      applications.</p>
+    <p>Open-source FlappyLang can be used on the all PC/Systems Operating.
+      All browsers support FlappyLang-JS
+    </p>
   </article>
-
 </main>
+
+<fieldset id="flappylang-box">
+  <legend>Try FlappyLang</legend>
+  <input id="cmdline"/><input id="runcmd" type="button" value="Run"/>
+  <div>Stack content: <span id="stack-view"></span></div>
+</fieldset>
+
+<hr/>
+
+<p>&nbsp;<br/>&nbsp;</p> <!-- Leave some room for the interpreter's box. -->
+
+<script type="text/javascript" src="./jush.js"></script>
+<script type="text/javascript">
+  jush.style('./jush.css');
+  jush.highlight_tag('pre');
+</script>
 
 <footer role="contentinfo">
   <p class="copyright">Copyright © 2017 FlappyLang. All rights reserved.</p>
   <p class="trademark">FlappyLang and the FlappyLang logo are trademarks of FlappyLang Team.</p>
 </footer>
 
-<script type="text/javascript" src="../js/ScrollDocs.js"></script>
+<script type="text/javascript" src="./ScrollDocs.js"></script>
 
 </body>
 </html>

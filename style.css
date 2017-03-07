@@ -508,7 +508,7 @@ cite:before {
   display: block;
   width: 190px;
   height: 48px;
-  background-image: url("./images/flappylang.svg");
+  background-image: url("flappylang.svg");
   background-repeat: no-repeat;
   background-size: 190px 48px
 }
